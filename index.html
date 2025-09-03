@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pro Background Remover & Changer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Pro Background Remover & Changer</h1>
+      <p>Upload your photo, remove background, change background & download final image.</p>
+    </header>
+
+    <main class="main-flex">
+      <!-- Left side: upload + preview + remove btn -->
+      <section class="left-panel">
+        <div class="upload-section">
+          <label for="upload" class="upload-label">Upload Your Photo</label>
+          <input type="file" id="upload" accept="image/*" />
+        </div>
+
+        <div class="preview-section">
+          <img id="preview" alt="Your uploaded image preview" />
+          <button id="removeBtn" class="btn primary-btn">Remove Background</button>
+        </div>
+      </section>
+
+      <!-- Right side: canvas + bg controls + buttons -->
+      <section class="right-panel">
+        <h2>Customize Background & Position</h2>
+
+        <div class="bg-option">
+          <label for="bgColor">Choose Background Color</label>
+          <input type="color" id="bgColor" value="#ffffff" />
+        </div>
+
+        <div class="bg-option">
+          <label for="bgImageUpload">Or Upload Background Image</label>
+          <input type="file" id="bgImageUpload" accept="image/*" />
+        </div>
+
+        <div class="action-buttons">
+          <button id="applyBg" class="btn primary-btn">Apply Background & Position</button>
+          <button id="unlockBtn" class="btn" title="Unlock for editing" style="display:none;">Unlock</button>
+          <button id="downloadBtn" class="btn download-btn">Download Image</button>
+        </div>
+
+        <p class="hint-text">
+          * Drag the image on the canvas below to reposition it before applying. <br>
+          * Use the blue box at bottom-right corner of image to resize.
+        </p>
+
+        <canvas id="canvas" aria-label="Image editor canvas"></canvas>
+      </section>
+      <button id="removeBgImageBtn">Remove Background Image</button>
+
+    </main>
+
+    <footer>
+      <p>© 2025 Your Company Name. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

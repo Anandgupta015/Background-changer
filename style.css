@@ -1,0 +1,220 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 15px;
+}
+
+.container {
+  max-width: 900px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 35px 45px;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+header h1 {
+  font-weight: 900;
+  font-size: 2.2rem;
+  color: #2d2d2d;
+  margin-bottom: 6px;
+}
+
+header p {
+  font-weight: 500;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Main flex container */
+.main-flex {
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+/* Left panel styling */
+.left-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.upload-label {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 8px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+#upload {
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+#upload:hover {
+  border-color: #667eea;
+}
+
+.preview-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+#preview {
+  max-width: 100%;
+  max-height: 220px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  background: #f8f8f8;
+  object-fit: contain;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background-color: #667eea;
+  color: white;
+}
+
+.download-btn {
+  background-color: #00b894;
+  color: white;
+}
+
+/* Right panel styling */
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-panel h2 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.bg-option {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #555;
+}
+
+.bg-option label {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.bg-option input[type="color"],
+.bg-option input[type="file"] {
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+/* Canvas */
+canvas#canvas {
+  border-radius: 12px;
+  width: 100% !important;
+  height: 480px;
+  border: 2px dashed #bbb;
+  box-shadow: 0 10px 20px rgba(102,126,234,0.12);
+  cursor: grab;
+  user-select: none;
+  margin-top: 10px;
+  background: white;
+  display: block;
+}
+
+canvas#canvas:active {
+  cursor: grabbing;
+}
+
+.hint-text {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main-flex {
+    flex-direction: column;
+  }
+
+  #preview {
+    max-height: 160px;
+  }
+
+  canvas#canvas {
+    height: 360px;
+  }
+}
